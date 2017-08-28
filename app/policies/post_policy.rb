@@ -3,27 +3,28 @@ class PostPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def index?
-      # Anyone can view the index
-      true
-    end
+  def index?
+    # Anyone can view the index
+    true
+  end
 
-    def show?
-      # Anyone can view any post
-      true
-    end
+  def show?
+    # Anyone can view any post
+    true
+  end
 
-    def create?
-      # Only admin can create posts
-      user_loggedin_and_admin?
-    end
+  def create?
+    # Only admin can create posts
+    user_logged_in_and_admin?
+  end
 
-    private
+  private
 
-    def user_loggedin_and_admin?
-      user && user.admin
-    end
-
+  def user_logged_in_and_admin?
+    user && user.admin
   end
 end
+
+

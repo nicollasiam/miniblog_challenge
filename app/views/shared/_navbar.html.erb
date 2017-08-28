@@ -26,7 +26,7 @@
         <li><a href="/">LOREM IPSUM</a></li>
         <li><a href="/">LOREM IPSUM</a></li>
         <li><a href="/">LOREM IPSUM</a></li>
-        <% if user_signed_in? && current_user.admin %>
+        <% if policy(Post).create? %>
           <li><%= link_to 'NEW POST', new_post_path %></li>
         <% else %>
           <li><a href="/">LOREM IPSUM</a></li>
