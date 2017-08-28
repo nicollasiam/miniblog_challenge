@@ -1,11 +1,56 @@
 .card {
+  padding: 10px;
+
   .img-card {
     width: 100%;
+    margin: 20px 0;
   }
 }
 
 .card-lg {
+  padding: 15px 15px 40px 15px;
+
   .img-card {
     width: 100%;
+    margin: 20px 0;
+    height: 500px;
+  }
+}
+
+.card, .card-lg {
+  background-color: $white;
+  border-radius: $border-small;
+  margin-bottom: 20px;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  h2 + p {
+    font-weight: bold;
+  }
+
+  h3 + p {
+    line-height: 1.8;
+  }
+
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
+
+  h2, h3 {
+    color: $orange;
+  }
+
+  hr {
+    border-top: 2px solid $orange;
+    width: 20%;
+    margin-bottom: 15px;
   }
 }

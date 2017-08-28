@@ -1,3 +1,15 @@
+body {
+  background-color: $gray-lighter;
+  font-size: $base-size;
+  line-height: $base-height;
+  font-family: $body-font;
+  color: $gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+}
+
 .flexbox {
   display: flex;
   align-items: center;

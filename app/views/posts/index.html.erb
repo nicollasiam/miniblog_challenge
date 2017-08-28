@@ -1,30 +1,41 @@
 <div class="container">
-  <div class="row">
     <% @posts.each_with_index do |post, index| %>
       <% if index == 0 %>
-        <div class="col-xs-12">
-          <div class="card-lg">
-            <h2 class="text-orange"><%= post.head_title.upcase %></h2>
-            <p><%= post.subtitle %></p>
-            <%= image_tag 'dish', class: 'img-card' %>
-            <hr class="border-orange">
-            <h3 class="text-orange"><%= post.title %></h3>
-            <p><%= post.content %></p>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="card-lg">
+              <%= link_to post_path(post) do %>
+                <h2 class="text-orange text-left"><%= post.head_title.upcase %></h2>
+                <p class="text-left"><%= post.subtitle %></p>
+                <%= image_tag 'dish', class: 'img-card' %>
+                <hr class="border-orange">
+                <h3 class="text-orange text-center"><%= post.title %></h3>
+                <p class="text-center"><%= post.content %></p>
+              <% end %>
+            </div>
           </div>
         </div>
       <% else %>
+        <% if index == 1 || index == 3 %>
+          <div class="row">
+        <% end %>
           <div class="col-xs-12 col-md-6">
             <div class="card">
-              <h2 class="text-orange"><%= post.head_title.upcase %></h2>
-              <p class="hidden-md hidden-lg"><%= post.subtitle %></p>
-              <%= image_tag 'dish', class: 'img-card' %>
-              <hr class='border-orange hidden-md hidden-lg'>
-              <h3 class="text-orange hidden-md hidden-lg"><%= post.title %></h3>
-              <p class="hidden-md hidden-lg"><%= post.content %></p>
+              <%= link_to post_path(post) do %>
+                <h2 class="text-orange text-left"><%= post.head_title.upcase %></h2>
+                <p class="hidden-md hidden-lg text-left"><%= post.subtitle %></p>
+                <%= image_tag 'dish', class: 'img-card' %>
+                <hr class='border-orange hidden-md hidden-lg'>
+                <h3 class="text-orange text-center hidden-md hidden-lg"><%= post.title %></h3>
+                <p class="hidden-md hidden-lg text-center"><%= post.content %></p>
+              <% end %>
             </div>
           </div>
+          <% if index == 2 || index == 4 %>
+            </div>
+          <% end %>
       <% end %>
     <% end %>
-  </div>
+
   <%= paginate @posts, window: 3 %>
 </div>
