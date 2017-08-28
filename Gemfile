@@ -19,6 +19,8 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 # Faker for some seed tests
 gem 'faker'
+# Pagination gem
+gem 'kaminari'
 
 # ============================================================================
 #                            DEFAULT GEMS

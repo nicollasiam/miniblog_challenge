@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row">
     <%= @posts.count %> Posts
+    <%#= raise %>
     <div class="col-xs-12">
       <% @posts.each do |post| %>
         <%= post.title %>
         <br>
       <% end %>
+      <%= paginate @posts, window: 3 %>
     </div>
   </div>
 </div>
