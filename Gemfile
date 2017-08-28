@@ -17,6 +17,8 @@ gem 'devise'
 gem 'bootstrap-sass'
 # Simple form to make forms easier
 gem 'simple_form'
+# Faker for some seed tests
+gem 'faker'
 
 # ============================================================================
 #                            DEFAULT GEMS
