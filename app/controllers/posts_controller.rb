@@ -10,8 +10,18 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+    authorize(@post)
   end
 
   def create
+    @post = Post.new(post_params)
+    authorize(@post)
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:tile, :content)
   end
 end
