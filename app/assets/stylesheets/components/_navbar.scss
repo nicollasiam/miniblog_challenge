@@ -13,9 +13,80 @@ nav {
 
   .navbar-collapse {
     font-size: 11px;
+
+    ul a {
+      padding: 10px 5px;
+    }
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+
+    > li {
+      float: none;
+      display: inline-block;
+    }
   }
 }
 
 .navbar-grey {
   background-color: $gray-lighter;
+}
+
+// LARGE DEVICES
+@media only screen and (min-width: $screen-lg) {
+  nav {
+    .navbar-collapse {
+    ul a {
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
+
+// SMALL DEVICES
+@media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  nav {
+    .navbar-collapse {
+      font-size: 8px;
+    }
+  }
+}
+
+
+// EXTRA SMALL DEVICES
+@media only screen and (max-width: $screen-xs-max) {
+  nav {
+    &.navbar-default {
+      border-bottom: 0;
+    }
+
+    .navbar-collapse {
+      border-top: 0;
+    }
+
+    .navbar-toggle {
+      margin-top: 15px;
+    }
+
+    &.navbar-default {
+      background-color: $gray-lighter;
+    }
+
+    .navbar-nav {
+      > li {
+        display: block;
+      }
+    }
+
+    .navbar-brand {
+      height: 100%;
+
+      img {
+        height: 40px;
+      }
+    }
+  }
 }
