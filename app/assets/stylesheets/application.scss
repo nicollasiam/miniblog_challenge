@@ -1,0 +1,10 @@
+// Bootstrap imports
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Configuration variables
+@import "config/variables";
+
+// My CSS libraries
+@import "index";
+@import "components/index";
