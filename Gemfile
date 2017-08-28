@@ -6,6 +6,21 @@ git_source(:github) do |repo_name|
 end
 
 
+# ============================================================================
+#                            GEMS ADDED
+# ============================================================================
+# Authorization gem
+gem 'pundit'
+# Authentication gem
+gem 'devise'
+# Bootstrap
+gem 'bootstrap-sass'
+# Simple form to make forms easier
+gem 'simple_form'
+
+# ============================================================================
+#                            DEFAULT GEMS
+# ============================================================================
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.5'
 # Use sqlite3 as the database for Active Record
