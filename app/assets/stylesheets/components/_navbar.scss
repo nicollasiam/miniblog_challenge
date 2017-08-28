@@ -1,0 +1,21 @@
+nav {
+  &.navbar-default {
+    background-color: $white;
+  }
+
+  .navbar-brand {
+    height: 100%;
+
+    img {
+      height: 60px;
+    }
+  }
+
+  .navbar-collapse {
+    font-size: 11px;
+  }
+}
+
+.navbar-grey {
+  background-color: $gray-lighter;
+}
