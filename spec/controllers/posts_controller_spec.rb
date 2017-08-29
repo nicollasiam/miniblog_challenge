@@ -25,7 +25,7 @@ RSpec.describe PostsController, :type => :controller do
       it 'Returns status 200 OK' do
         post = Post.new(title: 'Lorem', content: 'Lorem', head_title: 'Lorem', subtitle: 'Lorem')
         post.user = User.find(1)
-        get :show, params: { id: post.to_param }
+        get :show, params: { id: 1 }
         expect(response.status).to eql(200)
       end
 

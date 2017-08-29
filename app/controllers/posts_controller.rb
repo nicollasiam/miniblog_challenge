@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   # Skips authentication on index and show pages
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   def index
     @posts = policy_scope(Post).page params[:page]
   end
@@ -32,5 +34,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content, :head_title, :subtitle)
+  end
+
+  def user_not_authorized
+    redirect_to(request.referrer || root_path)
   end
 end
