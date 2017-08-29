@@ -1,24 +1,78 @@
-# README
+# Miniblog - Nícollas Isabel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação sugerida como desafio pela equipe do TudoGostoso - Webedia
 
-Things you may want to cover:
+## Configurações
 
-* Ruby version
+* Pundit
+Utilizado para autorização.
 
-* System dependencies
+* Devise
+Utilizado para autenticação.
 
-* Configuration
+* Kaminari
+Utilizado para paginação.
 
-* Database creation
+* rspec-rails
+* rails-controller-testing
+* factory_girl_rails
+Utilizados para teste.
 
-* Database initialization
+* SQLite3
+Como a aplicação é pequena, foi utlizado o SQLite3.
 
-* How to run the test suite
+## Instalação do Sistema
+No terminal, vá até onde deseja salvar os arquivos e digite
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+git clone https://github.com/nicollasiam/miniblog_challenge.git
+cd miniblog_challenge
 
-* Deployment instructions
+bundle install
 
-* ...
+rails db:create
+rails db:migrate
+```
+
+## Inserindo dados
+Para a melhor visualização, foram criados dados para popular o Banco de Dados da aplicação.
+No terminal, digite:
+
+```bash
+rails db:seed
+```
+
+Foram criados dois usuários principais, que estarão disponíveis após o seed (podem ser vistos no arquivo db/seed.rb):
+
+* Usuário administrador
+
+```ruby
+admin = User.create!(email: 'admin@admin.com',
+                     password: '123456',
+                     admin: true)
+```
+
+* Usuário não administrador
+
+```ruby
+user = User.create!(email: 'a@a.com',
+                    password: '123456')
+```
+
+## Iniciar o servidor
+Após esses passos, basta iniciar o servidor. No terminal:
+
+```bash
+rails server
+```
+
+O site estará no ar, no endereço http://localhost:3000
+
+
+## Testes
+Também foram desenvolvidos alguns testes.
+Para executá-los, basta inserir o comando:
+
+```bash
+rspec
+```
