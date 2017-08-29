@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    puts params
     @post = policy_scope(Post).find(params[:id])
     authorize(@post)
   end

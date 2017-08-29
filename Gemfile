@@ -53,6 +53,13 @@ gem 'jquery-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  #  Gems added for testing purposes
+  gem 'rspec-rails', '~> 3.6'
+  gem 'rails-controller-testing'
+
+  # Factory girl for testing
+  gem 'factory_girl_rails'
 end
 
 group :development do
