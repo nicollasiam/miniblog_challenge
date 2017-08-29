@@ -37,6 +37,6 @@ class PostsController < ApplicationController
   end
 
   def user_not_authorized
-    redirect_to(request.referrer || root_path)
+    redirect_to(root_path)
   end
 end
