@@ -57,7 +57,7 @@ RSpec.describe PostsController, :type => :controller do
 
     before do
       admin = FactoryGirl.create(:admin)
-      sign_in :user, admin
+      sign_in admin, scope: :user
     end
 
     describe 'GET index page' do
@@ -81,7 +81,14 @@ RSpec.describe PostsController, :type => :controller do
 
     describe 'Sends a HTTP POST to create a new Post' do
       it 'Returns status 200' do
-        post :create
+        post :create, params: {
+                        post: {
+                          title: 'Lorem',
+                          subtitle: 'Lorem',
+                          content: 'Lorem',
+                          head_title: 'Lorem'
+                        }
+                      }
         expect(response.status).to eql(200)
       end
     end

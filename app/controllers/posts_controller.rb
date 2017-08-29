@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    puts params
     @post = policy_scope(Post).find(params[:id])
     authorize(@post)
   end
@@ -20,11 +19,18 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     authorize(@post)
+    @post.user = current_user
+
+    if @post.save
+      redirect_to post_path(@post)
+    else
+      render :new
+    end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:tile, :content)
+    params.require(:post).permit(:title, :content, :head_title, :subtitle)
   end
 end
