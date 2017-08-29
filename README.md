@@ -4,25 +4,18 @@ Aplicação sugerida como desafio pela equipe do TudoGostoso - Webedia
 
 ## Configurações
 
-* Pundit
-Utilizado para autorização.
+* Pundit - Utilizado para autorização.
 
-* Devise
-Utilizado para autenticação.
+* Devise - Utilizado para autenticação.
 
-* Kaminari
-Utilizado para paginação.
+* Kaminari - Utilizado para paginação.
 
-* rspec-rails
-* rails-controller-testing
-* factory_girl_rails
-Utilizados para teste.
+* rspec-rails, rails-controller-testing e factory_girl_rails - Utilizados para teste.
 
-* SQLite3
-Como a aplicação é pequena, foi utlizado o SQLite3.
+* SQLite3 - Como a aplicação é pequena, foi utlizado o SQLite3.
 
 ## Instalação do Sistema
-No terminal, vá até onde deseja salvar os arquivos e digite
+No terminal, vá até onde desejar salvar os arquivos e digite:
 
 ```bash
 git clone https://github.com/nicollasiam/miniblog_challenge.git
@@ -35,7 +28,7 @@ rails db:migrate
 ```
 
 ## Inserindo dados
-Para a melhor visualização, foram criados dados para popular o Banco de Dados da aplicação.
+Para a melhor visualização, foram criados dados para popular a Database da aplicação.
 No terminal, digite:
 
 ```bash
