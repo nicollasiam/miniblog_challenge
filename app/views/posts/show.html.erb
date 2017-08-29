@@ -1,5 +1,6 @@
-<% content_for :title, @post.title %>
+<% content_for :title, "Receita de #{@post.title} - TudoGostoso" %>
 <% content_for :meta_description, @post.subtitle %>
+<% content_for :meta_keywords, "Receita de #{@post.title}" %>
 
 <div class="container">
   <div class="row">
