@@ -6,8 +6,12 @@ label {
   margin-bottom: 20px;
 }
 
-input {
+input, textarea {
   width: 100%;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .form-actions {

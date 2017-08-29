@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 text-center">
+      <h2>New Post</h2>
+
+      <%= simple_form_for(@post) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :head_title, label: 'Main Title', required: true, autofocus: true %>
+          <%= f.input :subtitle, required: true %>
+          <%= f.input :title, required: true %>
+          <%= f.input :content, required: true %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Create!" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
