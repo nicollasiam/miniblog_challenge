@@ -22,7 +22,7 @@
   border-radius: $border-small;
   margin-bottom: 20px;
 
-  h2 {
+  h1, h2 {
     margin-bottom: 0;
   }
 
@@ -31,7 +31,7 @@
     margin-bottom: 20px;
   }
 
-  h2 + p {
+  h1 + p, h2 + p {
     font-weight: bold;
   }
 
@@ -44,7 +44,7 @@
     color: $gray;
   }
 
-  h2, h3 {
+  h1, h2, h3 {
     color: $orange;
   }
 

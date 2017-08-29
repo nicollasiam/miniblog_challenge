@@ -1,8 +1,10 @@
+<% content_for :title, @post.head_title %>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="card-lg">
-        <h2 class="text-orange text-left"><%= @post.head_title.upcase %></h2>
+        <h1 class="text-orange text-left"><%= @post.head_title.upcase %></h1>
         <p class="text-left"><%= @post.subtitle %></p>
         <%= image_tag 'dish', class: 'img-card' %>
         <hr class="border-orange">
